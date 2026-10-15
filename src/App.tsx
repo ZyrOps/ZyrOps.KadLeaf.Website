@@ -694,7 +694,7 @@ function Footer() {
       </div>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-5 flex flex-wrap items-center justify-between gap-4">
         <p className="text-[14px]" style={{ fontFamily: "'Inter:Regular', Inter, sans-serif", color: '#414944' }}>
-          © 2024 Kadleaf. All rights reserved.
+          © {new Date().getFullYear()} Kadleaf. All rights reserved.
         </p>
         <div className="flex gap-6">
           {['Privacy Policy', 'Terms of Service'].map((l) => (
