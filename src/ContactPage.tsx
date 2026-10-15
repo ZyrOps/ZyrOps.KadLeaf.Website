@@ -492,6 +492,7 @@ export default function ContactPage() {
   useScrollReveal()
 
   useEffect(() => {
+    document.title = 'Kadleaf | Contact'
     window.scrollTo(0, 0)
   }, [])
 

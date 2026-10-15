@@ -582,6 +582,7 @@ export default function AboutPage() {
   useScrollReveal()
 
   useEffect(() => {
+    document.title = 'Kadleaf | About'
     window.scrollTo(0, 0)
   }, [])
 

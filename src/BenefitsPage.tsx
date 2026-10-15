@@ -659,6 +659,7 @@ export default function BenefitsPage() {
   useScrollReveal()
 
   useEffect(() => {
+    document.title = 'Kadleaf | Benefits'
     window.scrollTo(0, 0)
   }, [])
 

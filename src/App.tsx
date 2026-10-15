@@ -714,6 +714,7 @@ export default function App() {
   useScrollReveal()
 
   useEffect(() => {
+    document.title = 'Kadleaf | Home'
     window.scrollTo(0, 0)
   }, [])
 
