@@ -238,7 +238,7 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-[80px] min-h-screen flex flex-col overflow-hidden"
+      className="relative pt-[80px] min-h-[88vh] md:min-h-screen flex flex-col overflow-hidden"
       style={{ background: 'linear-gradient(90deg, rgb(234,234,236) 0%, rgb(228,228,230) 27%, rgb(222,222,222) 52%, rgb(207,204,205) 77%, rgb(197,195,196) 94%)' }}
     >
       {/* Full-bleed background video */}
@@ -259,8 +259,8 @@ function HeroSection() {
         style={{ background: 'linear-gradient(180deg, rgba(240,240,242,0.9) 0%, rgba(240,240,242,0.62) 52%, rgba(240,240,242,0.85) 100%)' }}
       />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto w-full px-8 md:px-16 lg:px-24 flex items-center flex-1 py-16">
-        <div className="max-w-[560px] flex flex-col gap-6 hero-reveal">
+      <div className="relative z-10 max-w-[1440px] mx-auto w-full px-8 md:px-16 lg:px-24 flex items-center flex-1 py-10 md:py-16">
+        <div className="max-w-[560px] flex flex-col gap-5 md:gap-6 hero-reveal">
           <p className="text-[11px] tracking-[2.4px] uppercase font-semibold"
             style={{ fontFamily: "'Roboto:SemiBold', Roboto, sans-serif", color: '#414944' }}>
             ARTISANAL MINIMALISM
@@ -322,13 +322,13 @@ function ProductShowcase() {
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
         style={{ width: '414px', height: '414px', background: 'radial-gradient(circle, rgba(246,246,246,0.5) 0%, transparent 70%)', filter: 'blur(50px)' }} />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-16 py-20 flex flex-col lg:flex-row gap-12 items-start">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-16 py-12 md:py-20 flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
         <div className="flex-1 flex flex-col gap-4 min-w-0">
-          <p className="text-[clamp(52px,8vw,100px)] font-medium leading-none opacity-40 select-none"
+          <p className="text-[clamp(40px,8vw,100px)] font-medium leading-none opacity-40 select-none"
             style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#e8e8e8', letterSpacing: '6px', textShadow: '0 0 20px rgba(125,87,0,0.2)' }}>
             {f.label}
           </p>
-          <p className="text-[clamp(48px,5vw,80px)] font-normal -mt-4 select-none"
+          <p className="text-[clamp(38px,5vw,80px)] font-normal -mt-4 select-none"
             style={{ fontFamily: 'Georgia, serif', color: '#033425', letterSpacing: '-1.28px', fontStyle: 'italic' }}>
             Honey
           </p>
@@ -353,8 +353,8 @@ function ProductShowcase() {
         <div className="flex-1 flex justify-center items-center py-4">
           <div className="relative" style={{ width: '360px', maxWidth: '90vw' }}>
             <img src={f.img} alt={`${f.name} honey`} key={f.id}
-              className="w-full object-cover rounded-xl"
-              style={{ height: '520px', boxShadow: '0 32px 80px rgba(0,0,0,0.25)', animation: 'fadeSlideIn 0.4s ease' }}
+              className="w-full h-[400px] md:h-[520px] object-cover rounded-xl"
+              style={{ boxShadow: '0 32px 80px rgba(0,0,0,0.25)', animation: 'fadeSlideIn 0.4s ease' }}
             />
           </div>
         </div>
@@ -414,10 +414,10 @@ function ProductShowcase() {
 /* ─── Process: From Hive to Home ─── */
 function ProcessSection() {
   return (
-    <section id="about" className="bg-white py-24">
+    <section id="about" className="bg-white py-14 md:py-24">
       <div className="max-w-[1280px] mx-auto px-8 md:px-16">
-        <div className="text-center mb-16 fade-up">
-          <h2 className="text-[clamp(40px,5vw,65px)] font-medium leading-[1.05]"
+        <div className="text-center mb-10 md:mb-16 fade-up">
+          <h2 className="text-[clamp(32px,6vw,65px)] font-medium leading-[1.05]"
             style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#033425' }}>
             From <span style={{ color: '#7d5700' }}>Hive</span> to <span style={{ color: '#7d5700' }}>Home</span>
           </h2>
@@ -426,23 +426,23 @@ function ProcessSection() {
             Our journey from the forest to your table.
           </p>
         </div>
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-12 md:gap-20">
           {PROCESS_STEPS.map((step, i) => (
             <div key={i}
-              className={`flex flex-col ${step.side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 items-center ${step.side === 'left' ? 'slide-left' : 'slide-right'}`}
+              className={`flex flex-col ${step.side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 items-center ${step.side === 'left' ? 'slide-left' : 'slide-right'}`}
               style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="shrink-0">
-                <div className="w-[220px] h-[220px] rounded-full overflow-hidden"
+                <div className="w-[160px] h-[160px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden"
                   style={{ boxShadow: '0 12px 40px rgba(0,0,0,0.12)' }}>
                   <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className={`flex-1 ${step.side === 'left' ? 'md:pl-8' : 'md:pr-8'}`}>
-                <h3 className="text-[22px] font-medium leading-normal mb-4"
+                <h3 className="text-[20px] md:text-[22px] font-medium leading-normal mb-3 md:mb-4"
                   style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#000' }}>
                   {step.title}
                 </h3>
-                <p className="text-[18px] leading-[30px]"
+                <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[30px]"
                   style={{ fontFamily: "'Inter:Regular', Inter, sans-serif", color: 'rgba(0,0,0,0.75)' }}>
                   {step.body}
                 </p>
@@ -458,15 +458,15 @@ function ProcessSection() {
 /* ─── Why Choose Kadleaf ─── */
 function WhySection() {
   return (
-    <section id="benefits" className="bg-white py-24 overflow-hidden">
+    <section id="benefits" className="bg-white py-14 md:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16">
-        <div className="text-center mb-16 fade-up">
-          <h2 className="text-[clamp(40px,5vw,65px)] font-medium leading-[1.05]"
+        <div className="text-center mb-10 md:mb-16 fade-up">
+          <h2 className="text-[clamp(32px,6vw,65px)] font-medium leading-[1.05]"
             style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#033425' }}>
             Why Choose <span style={{ color: '#7d5700' }}>Kadleaf</span>
           </h2>
         </div>
-        <div className="relative flex flex-col lg:flex-row gap-12 items-start">
+        <div className="relative flex flex-col lg:flex-row gap-10 md:gap-12 items-start">
           <div className="flex-1 flex flex-col gap-10">
             {WHY_FEATURES.slice(0, 3).map((f, i) => (
               <div key={f.title} className={`fade-up delay-${(i + 1) * 100}`}>
@@ -513,7 +513,7 @@ function WhySection() {
 /* ─── Our Story ─── */
 function StorySection() {
   return (
-    <section className="relative min-h-[600px] flex items-center overflow-hidden" style={{ background: '#0a0a0a' }}>
+    <section className="relative min-h-[480px] md:min-h-[600px] flex items-center overflow-hidden" style={{ background: '#0a0a0a' }}>
       <div className="absolute inset-0">
         <img src={storyForest}
           alt="Beekeeper in forest" className="w-full h-full object-cover opacity-50"
@@ -521,13 +521,13 @@ function StorySection() {
         <div className="absolute inset-0"
           style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, rgba(120,104,104,0) 100%)' }} />
       </div>
-      <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-16 py-24">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-16 py-16 md:py-24">
         <div className="max-w-[560px] flex flex-col gap-5 slide-left">
           <p className="text-[12px] tracking-[2.4px] font-semibold uppercase"
             style={{ fontFamily: "'Inter:Semi Bold', Inter, sans-serif", color: '#7d5700' }}>
             OUR STORY
           </p>
-          <h2 className="text-[clamp(40px,5vw,65px)] font-medium leading-[1.05] text-white"
+          <h2 className="text-[clamp(32px,6vw,65px)] font-medium leading-[1.05] text-white"
             style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif" }}>
             Where it all began
           </h2>
@@ -563,8 +563,8 @@ function StorySection() {
 /* ─── WhatsApp CTA ─── */
 function WhatsAppSection() {
   return (
-    <section className="bg-[#fefefe] py-24 flex flex-col items-center text-center px-8 fade-up">
-      <h2 className="text-[clamp(40px,5vw,65px)] font-medium leading-[1.1]"
+    <section className="bg-[#fefefe] py-16 md:py-24 flex flex-col items-center text-center px-8 fade-up">
+      <h2 className="text-[clamp(32px,6vw,65px)] font-medium leading-[1.1]"
         style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#1b1b1c' }}>
         Order on <span style={{ color: '#068b62' }}>WhatsApp</span>
       </h2>
@@ -627,9 +627,9 @@ function FAQSection() {
 function NewsletterSection() {
   const [email, setEmail] = useState('')
   return (
-    <section className="py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
+    <section className="py-14 md:py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
       <div className="w-full max-w-[672px] flex flex-col items-center gap-10 fade-up">
-        <h2 className="text-[clamp(36px,5vw,65px)] font-medium leading-none text-center"
+        <h2 className="text-[clamp(30px,6vw,65px)] font-medium leading-none text-center"
           style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#ffdeaa' }}>
           Stay Close to Nature.
         </h2>

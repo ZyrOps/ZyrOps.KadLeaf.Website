@@ -116,7 +116,7 @@ function Hero() {
         style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(154,101,6,0.06) 0%, transparent 70%)' }}
       />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-8 py-20 fade-up">
+      <div className="relative z-10 flex flex-col items-center text-center px-8 py-14 md:py-20 fade-up">
         <p
           className="text-[11px] tracking-[3px] uppercase font-semibold mb-6"
           style={{ fontFamily: "'Inter:Semi Bold', Inter, sans-serif", color: '#7d5700' }}
@@ -159,8 +159,8 @@ function Hero() {
 /* ─── Heritage ─── */
 function Heritage() {
   return (
-    <section className="bg-[#f8f8f6] py-20 px-8">
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-16 items-start">
+    <section className="bg-[#f8f8f6] py-14 md:py-20 px-8">
+      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
         {/* Left: text */}
         <div className="flex-1 slide-left">
           <p
@@ -293,7 +293,7 @@ const BELIEFS = [
 
 function WhatWeBelieve() {
   return (
-    <section className="bg-white py-24 px-8">
+    <section className="bg-white py-14 md:py-24 px-8">
       <div className="max-w-[1280px] mx-auto">
         <div className="text-center mb-16 fade-up">
           <h2
@@ -359,7 +359,7 @@ const WHY_FEATURES = [
 
 function WhyChoose() {
   return (
-    <section className="bg-[#f8f8f6] py-24 overflow-hidden">
+    <section className="bg-[#f8f8f6] py-14 md:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16">
         <div className="text-center mb-16 fade-up">
           <h2
@@ -442,7 +442,7 @@ function WhyChoose() {
 /* ─── Committed to Purity ─── */
 function Commitment() {
   return (
-    <section className="bg-white py-20 px-8 flex flex-col items-center text-center fade-up">
+    <section className="bg-white py-14 md:py-20 px-8 flex flex-col items-center text-center fade-up">
       <p
         className="text-[11px] tracking-[2.4px] font-semibold uppercase mb-6"
         style={{ fontFamily: "'Inter:Semi Bold', Inter, sans-serif", color: '#7d5700' }}
@@ -479,7 +479,7 @@ function Newsletter() {
   const [email, setEmail] = useState('')
 
   return (
-    <section className="py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
+    <section className="py-14 md:py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
       <div className="w-full max-w-[672px] flex flex-col items-center gap-10 fade-up">
         <h2
           className="text-[clamp(36px,5vw,65px)] font-medium leading-none text-center"
@@ -525,7 +525,7 @@ function Footer() {
   return (
     <footer id="contact" style={{ background: '#f6f3f2' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-16" style={{ borderBottom: '1px solid rgba(192,200,194,0.3)' }}>
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-10 md:gap-16">
           <div className="max-w-[320px] flex flex-col gap-4">
             <Link to="/" className="block h-[40px]">
               <img src={logoImg} alt="Kadleaf" className="h-full w-auto object-contain" />

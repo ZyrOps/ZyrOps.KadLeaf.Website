@@ -129,7 +129,7 @@ function Nav() {
 function HeroSection() {
   return (
     <section className="pt-[80px] pb-0 bg-[#fefefe] flex flex-col items-center">
-      <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-20 pb-24 flex flex-col items-center text-center gap-4 fade-up">
+      <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-14 md:pt-20 pb-16 md:pb-24 flex flex-col items-center text-center gap-4 fade-up">
         <p className="text-[16px] tracking-[3.2px] uppercase"
           style={{ fontFamily: "'Inter:Regular', Inter, sans-serif", color: '#7d5700' }}>
           NATURAL WELLNESS
@@ -399,7 +399,7 @@ function ContactForm() {
 function NewsletterSection() {
   const [email, setEmail] = useState('')
   return (
-    <section className="py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
+    <section className="py-14 md:py-20 px-8 flex justify-center" style={{ background: '#033425' }}>
       <div className="w-full max-w-[672px] flex flex-col items-center gap-10 fade-up">
         <h2 className="text-[clamp(36px,5vw,65px)] font-medium leading-none text-center"
           style={{ fontFamily: "'Roboto:Medium', Roboto, sans-serif", color: '#ffdeaa' }}>
@@ -441,7 +441,7 @@ function Footer() {
     <footer style={{ background: '#f6f3f2' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-16"
         style={{ borderBottom: '1px solid rgba(192,200,194,0.3)' }}>
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-10 md:gap-16">
           <div className="max-w-[320px] flex flex-col gap-4">
             <Link to="/" className="block h-[40px]">
               <img src={logoImg} alt="Kadleaf" className="h-full w-auto object-contain" />
